@@ -185,6 +185,18 @@ Common filters for `--amenities`:
 
 Full list in `references/amenities.md`.
 
+## ⚠️ Important: Pricing Disclaimer
+
+**Amadeus API prices are NOT retail prices.** The API returns negotiated, net, or wholesale rates — not the public prices you see on Booking.com, Expedia, or hotel websites.
+
+Key differences:
+- **Net vs Retail:** API returns "net rates" (raw cost), not marked-up retail prices
+- **B2B Pricing:** Designed for travel agencies/developers to add their own markup
+- **Negotiated Rates:** May include corporate or consortia rates unavailable to consumers
+- **Tax Breakdown:** Prices often show base + taxes separately
+
+**Use these prices for comparison and tracking trends**, not as exact retail quotes. Actual booking prices on consumer sites will differ.
+
 ## Limitations & Notes
 
 - **Test environment:** Limited/cached data, not real-time. Good for development.
@@ -192,6 +204,7 @@ Full list in `references/amenities.md`.
 - **No direct booking:** API returns offer details; actual booking requires payment handling (PCI compliance).
 - **Rate limits:** 10 TPS (test), 40 TPS (production). Scripts include backoff.
 - **Data freshness:** Prices change frequently. Always re-check before booking elsewhere.
+- **Not retail prices:** See pricing disclaimer above.
 
 ## Error Handling
 
